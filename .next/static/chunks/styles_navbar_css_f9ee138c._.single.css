@@ -1,0 +1,41 @@
+/* [project]/styles/navbar.css [app-client] (css) */
+.navbar {
+  border-right: 1px solid #ccc;
+  flex-direction: column;
+  width: 17vw;
+  height: 100vh;
+  display: flex;
+}
+
+.logo {
+  flex-direction: column;
+  margin-bottom: 2vw;
+  padding-left: 2vw;
+  display: flex;
+}
+
+.upper {
+  flex-direction: column;
+  gap: 1.7rem;
+  margin-left: 3vw;
+  display: flex;
+}
+
+.lower {
+  flex-direction: column;
+  gap: 1.7rem;
+  margin-top: auto;
+  margin-bottom: 5vw;
+  margin-left: 3vw;
+  display: flex;
+}
+
+.link {
+  color: #000;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  display: flex;
+}
+
+/*# sourceMappingURL=styles_navbar_css_f9ee138c._.single.css.map*/
