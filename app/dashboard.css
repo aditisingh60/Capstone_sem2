@@ -1,0 +1,80 @@
+.dashboard{
+  padding: 1rem;
+  width: 82.5vw;
+}
+.page-header{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.page-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.page-subtitle{
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+.page-actions{
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.search-bar{
+  position:relative;
+  display: flex;
+  gap: 0.5rem;
+}
+.search-input{
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--dark-light);
+  color: var(--text-primary);
+  font-size:0.875rem;
+  border: 1px solid var(--dark-lighter);
+  padding-right: 2rem;
+}
+.search-input::placeholder{
+  color: var(--text-muted);
+
+}
+.search-input:focus{
+  outline: none;
+  border-color: var(--primary);
+}
+.search-icon{
+  background-color: var(--primary);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  transition: opacity 0.2s;
+
+}
+.action-button:hover {
+  opacity: 0.8;
+}
+
+.action-button-icon {
+  margin-right: 0.5rem;
+}
+
+.action-button.secondary {
+  background-color: var(--secondary);
+}
+
+.action-button.danger {
+  background-color: var(--danger);
+}
+
+.action-button.warning {
+  background-color: var(--warning);
+  color: var(--dark);
+}

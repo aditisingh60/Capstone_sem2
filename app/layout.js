@@ -1,12 +1,12 @@
 import "./globals.css";
-import Navbar from "@/components/navbar"; 
+import Sidebar from "@/components/sidebar"; 
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
+      <body style={{display:"flex"}} className="main-content">
+        <Sidebar />
         {children}
       </body>
     </html>

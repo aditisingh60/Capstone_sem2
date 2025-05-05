@@ -1,0 +1,91 @@
+/* [project]/app/dashboard.css [app-client] (css) */
+.dashboard {
+  width: 82.5vw;
+  padding: 1rem;
+}
+
+.page-header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: .875rem;
+}
+
+.page-actions {
+  gap: .5rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.search-bar {
+  gap: .5rem;
+  display: flex;
+  position: relative;
+}
+
+.search-input {
+  background-color: var(--dark-light);
+  color: var(--text-primary);
+  border: 1px solid var(--dark-lighter);
+  border-radius: .5rem;
+  padding: .5rem 2rem .5rem 1rem;
+  font-size: .875rem;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.search-icon {
+  background-color: var(--primary);
+  color: var(--text-primary);
+  cursor: pointer;
+  border: none;
+  border-radius: .5rem;
+  align-items: center;
+  padding: .5rem 1rem;
+  font-size: .875rem;
+  font-weight: 500;
+  transition: opacity .2s;
+  display: flex;
+}
+
+.action-button:hover {
+  opacity: .8;
+}
+
+.action-button-icon {
+  margin-right: .5rem;
+}
+
+.action-button.secondary {
+  background-color: var(--secondary);
+}
+
+.action-button.danger {
+  background-color: var(--danger);
+}
+
+.action-button.warning {
+  background-color: var(--warning);
+  color: var(--dark);
+}
+
+
+/*# sourceMappingURL=app_dashboard_d82ee768.css.map*/

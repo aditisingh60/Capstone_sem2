@@ -1,0 +1,109 @@
+.sidebar{
+    background-color: var(--dark-light);
+    width: 17.5vw;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+    height: 100vh;
+}
+.sidebar-content{
+    padding: 1rem
+}
+.sidebar-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5 rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-left: 2.5rem;
+}
+
+.menu-button{
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+.sidebar-menu{
+    margin-top: 2rem;
+}
+.sidebar-menu-list{
+    list-style: none;
+}
+.sidebar-menu-item{
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.sidebar-menu-link{
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    color: var(--text-secondary);
+    transition: background-color 0.2s;
+    gap: 1rem;
+}
+.sidebar-menu-link:hover{
+    background-color: var(--dark-lighter);
+}
+.sidebar-menu-link.active{
+    background-color: rgba(51, 102, 255, 0.2);
+    border-left: 4px solid var(--primary);
+    color: var(--text-primary);
+}
+.sidebar-menu-icon{
+    width: 1.25rem;
+    margin-left: 0.75rem;
+}
+.user-profile{
+    background-color: var(--dark-lighter);
+    border-radius: 0,.5rem;
+    padding: 0.75rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 17.5vw;  
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.user-avatar{
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.user-name{
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.user-email{
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+.logout-button{
+    width: 100%;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--dark);
+    color: var(--text-muted);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+.logout-button:hover{
+    color: var(--text-primary);
+
+}
+.logo-icon{
+    margin-right: 0.25rem;
+}
