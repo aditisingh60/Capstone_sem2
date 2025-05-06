@@ -1,6 +1,7 @@
 /* [project]/app/dashboard.css [app-client] (css) */
 .dashboard {
   width: 82.5vw;
+  margin-left: 17.5vw;
   padding: 1rem;
 }
 
@@ -85,6 +86,302 @@
 .action-button.warning {
   background-color: var(--warning);
   color: var(--dark);
+}
+
+.card {
+  background-color: var(--dark-light);
+  border: 1px solid var(--dark-lighter);
+  border-radius: .75rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.card-header {
+  border-bottom: 1px solid var(--dark-lighter);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.stats-grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  display: grid;
+}
+
+.stat-card {
+  background-color: var(--dark-light);
+  border: 1px solid var(--dark-lighter);
+  border-radius: .75rem;
+  padding: 1rem;
+}
+
+.stat-header {
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: .875rem;
+}
+
+.stat-value {
+  margin-top: .25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-change {
+  align-items: center;
+  margin-top: .25rem;
+  font-size: .875rem;
+  display: flex;
+}
+
+.stat-change.positive {
+  color: var(--secondary);
+}
+
+.stat-change.negative {
+  color: var(--danger);
+}
+
+.stat-change.neutral {
+  color: var(--text-muted);
+}
+
+.stat-change-value {
+  margin-right: .25rem;
+}
+
+.stat-change-period {
+  color: var(--text-muted);
+  margin-left: .5rem;
+  font-size: .75rem;
+}
+
+.stat-icon-container {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+}
+
+.stat-icon-container.primary {
+  background-color: #3366ff1a;
+}
+
+.stat-icon-container.secondary {
+  background-color: #00c9a71a;
+}
+
+.stat-icon-container.purple {
+  background-color: #845ef71a;
+}
+
+.stat-icon-container.warning {
+  background-color: #ffd1661a;
+}
+
+.stat-icon {
+  color: var(--primary);
+}
+
+.stat-icon.secondary {
+  color: var(--secondary);
+}
+
+.stat-icon.purple {
+  color: var(--purple);
+}
+
+.stat-icon.warning {
+  color: var(--warning);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.crypto-table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.crypto-table th {
+  text-align: left;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding: .75rem 1.5rem;
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+.crypto-table th:not(:first-child) {
+  text-align: right;
+}
+
+.crypto-table td {
+  white-space: nowrap;
+  padding: 1rem 1.5rem;
+}
+
+.crypto-table td:not(:first-child) {
+  text-align: right;
+}
+
+.crypto-table tbody tr {
+  transition: background-color .2s;
+}
+
+.crypto-table tbody tr:hover {
+  background-color: var(--dark-lighter);
+}
+
+.crypto-table tbody tr:not(:last-child) {
+  border-bottom: 1px solid var(--dark-lighter);
+}
+
+.crypto-name-cell {
+  align-items: center;
+  display: flex;
+}
+
+.crypto-icon {
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-right: .75rem;
+  display: flex;
+}
+
+.crypto-icon.bitcoin {
+  color: var(--warning);
+}
+
+.crypto-icon.ethereum {
+  color: var(--purple);
+}
+
+.crypto-icon.usdc {
+  color: var(--secondary);
+}
+
+.crypto-name {
+  font-size: .875rem;
+  font-weight: 500;
+}
+
+.crypto-symbol {
+  color: var(--text-muted);
+  font-size: .75rem;
+}
+
+.allocation-bar {
+  background-color: var(--dark);
+  border-radius: 9999px;
+  width: 100%;
+  height: .5rem;
+}
+
+.allocation-progress {
+  border-radius: 9999px;
+  height: .5rem;
+}
+
+.allocation-progress.bitcoin {
+  background-color: var(--warning);
+}
+
+.allocation-progress.ethereum {
+  background-color: var(--purple);
+}
+
+.allocation-progress.usdc {
+  background-color: var(--secondary);
+}
+
+.allocation-value {
+  color: var(--text-muted);
+  margin-top: .25rem;
+  font-size: .75rem;
+}
+
+.positive-change {
+  color: var(--secondary);
+}
+
+.negative-change {
+  color: var(--danger);
+}
+
+.neutral-change {
+  color: var(--text-muted);
+}
+
+.holdings-main {
+  font-size: .875rem;
+}
+
+.holdings-usd {
+  color: var(--text-muted);
+  font-size: .75rem;
+}
+
+.action-icon {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.action-icon:hover {
+  opacity: .8;
+}
+
+.chart-container {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  position: relative;
+}
+
+.chart-period {
+  margin-top: .5rem;
+  display: flex;
+}
+
+.chart-period-button {
+  background-color: var(--dark-lighter);
+  color: var(--text-muted);
+  cursor: pointer;
+  border: none;
+  border-radius: .25rem;
+  margin-right: .5rem;
+  padding: .25rem .75rem;
+  font-size: .75rem;
+}
+
+.chart-period-button.active {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: #36f3;
 }
 
 

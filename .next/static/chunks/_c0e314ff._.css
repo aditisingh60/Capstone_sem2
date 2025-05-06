@@ -55,6 +55,7 @@ button, input, select, textarea {
   width: 17.5vw;
   height: 100vh;
   transition: all .3s ease-in-out;
+  position: fixed;
 }
 
 .sidebar-content {

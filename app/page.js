@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import {cryptoData} from "../data/cryptoData";
+import {cryptoAssets} from "../data/cryptoData";
 import styles from "./dashboard.css";
 
 export default function Dashboard() {
@@ -64,6 +64,112 @@ export default function Dashboard() {
           />
           <i className="fas fa-search search-icon">Refresh</i>
         </div>
+        </div>
+      </div>
+      <div className="stats-grid">
+        {stats.map((stat, index) => (
+          <div key={index} className="stat-card">
+            <div className="stat-header">
+              <div>
+                <p className="stat-label">{stat.label}</p>
+                <h3 className="stat-value">{stat.value}</h3>
+                <div className={`stat-change ${stat.changeType}`}>
+                  <i className={`fas fa-arrow-${stat.changeType === 'positive' ? 'up' : 'down'} stat-change-value`}></i>
+                  <span>{stat.change}</span>
+                  <span className="stat-change-period">{stat.period}</span>
+                </div>
+              </div>
+              <div className={`stat-icon-container ${stat.iconColor}`}>
+                <i className={`fas ${stat.icon} stat-icon ${stat.iconColor}`}></i>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+
+      <div className="card">
+        <div className="card-header">
+          <h3 className="card-title">Portfolio Performance</h3>
+          <div className="chart-period">
+            {chartPeriods.map(period => (
+              <button 
+                key={period} 
+                className={`chart-period-button ${activeChartPeriod === period ? 'active' : ''}`}
+                onClick={() => setActiveChartPeriod(period)}
+              >
+                {period}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="card-content">
+          <div className="chart-container">
+            <canvas id="portfolioChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-header">
+          <h3 className="card-title">Your Assets</h3>
+        </div>
+        <div className="table-container">
+          <table className="crypto-table">
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>Price</th>
+                <th>24h Change</th>
+                <th>Holdings</th>
+                <th>Value</th>
+                <th>Allocation</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cryptoAssets.map((asset) => (
+                <tr key={asset.id}>
+                  <td>
+                    <div className="crypto-name-cell">
+                      <div className={`crypto-icon ${asset.symbol.toLowerCase()}`}>
+                        <i className={asset.icon}></i>
+                      </div>
+                      <div>
+                        <div className="crypto-name">{asset.name}</div>
+                        <div className="crypto-symbol">{asset.symbol}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{asset.price}</td>
+                  <td>
+                    <span className={asset.priceChange.includes('+') ? 'positive-change' : 'negative-change'}>
+                      {asset.priceChange}
+                    </span>
+                  </td>
+                  <td>
+                    <div className="holdings-main">{asset.holdings} {asset.symbol}</div>
+                    <div className="holdings-usd">≈ {asset.holdingsValue}</div>
+                  </td>
+                  <td>{asset.holdingsValue}</td>
+                  <td>
+                    <div className="allocation-bar">
+                      <div 
+                        className={`allocation-progress ${asset.symbol.toLowerCase()}`} 
+                        style={{width: `${asset.allocation}%`}}
+                      ></div>
+                    </div>
+                    <div className="allocation-value">{asset.allocation}%</div>
+                  </td>
+                  <td>
+                    <button className="action-icon">
+                      <i className="fas fa-exchange-alt"></i>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
