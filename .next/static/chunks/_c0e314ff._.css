@@ -51,7 +51,6 @@ button, input, select, textarea {
 /* [project]/styles/sidebar.css [app-client] (css) */
 .sidebar {
   background-color: var(--dark-light);
-  z-index: 10;
   width: 17.5vw;
   height: 100vh;
   transition: all .3s ease-in-out;
@@ -69,13 +68,7 @@ button, input, select, textarea {
 }
 
 .logo {
-  font-size: 1.5 rem;
-  color: var(--primary);
-  justify-content: center;
-  align-items: center;
   margin-left: 2.5rem;
-  font-weight: bold;
-  display: flex;
 }
 
 .menu-button {

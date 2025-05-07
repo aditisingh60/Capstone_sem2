@@ -36,7 +36,7 @@ function Sidebar() {
                   href={item.path} 
                   className={`sidebar-menu-link ${currentPath === item.path ? 'active' : ''}`}
                 >
-                  <i className="sidebar-menu-icon"><Image src={item.icon} alt="icon-icon" width={24} height={24} /></i>
+                  <Image src={item.icon} alt="icon-icon" width={24} height={24} />
                   <span>{item.name}</span>
                 </Link>
               </li>
@@ -53,7 +53,7 @@ function Sidebar() {
             </div>
           </div>
           <button className="logout-button">
-            <i className="fas fa-sign-out-alt logout-icon"></i> Log out
+            <i className="logout-icon"></i> Log out
           </button>
         </div>
       </div>

@@ -13,7 +13,6 @@ export default function Dashboard() {
       change: '+2.45%',
       changeType: 'positive',
       period: 'vs yesterday',
-      icon: 'fa-wallet',
       iconColor: 'primary'
     },
     {
@@ -22,7 +21,6 @@ export default function Dashboard() {
       change: '-1.2%',
       changeType: 'negative',
       period: 'vs yesterday',
-      icon: 'fa-chart-line',
       iconColor: 'secondary'
     },
     {
@@ -31,7 +29,6 @@ export default function Dashboard() {
       change: '+1',
       changeType: 'positive',
       period: 'since last week',
-      icon: 'fa-coins',
       iconColor: 'purple'
     },
     {
@@ -40,7 +37,6 @@ export default function Dashboard() {
       change: '+4.8%',
       changeType: 'positive',
       period: 'all time',
-      icon: 'fa-percentage',
       iconColor: 'warning'
     }
   ];
@@ -79,9 +75,9 @@ export default function Dashboard() {
                   <span className="stat-change-period">{stat.period}</span>
                 </div>
               </div>
-              <div className={`stat-icon-container ${stat.iconColor}`}>
+              {/* <div className={`stat-icon-container ${stat.iconColor}`}>
                 <i className={`fas ${stat.icon} stat-icon ${stat.iconColor}`}></i>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
@@ -156,7 +152,7 @@ export default function Dashboard() {
                     <div className="allocation-bar">
                       <div 
                         className={`allocation-progress ${asset.symbol.toLowerCase()}`} 
-                        style={{width: `${asset.allocation}%`}}
+                        style={{width: `${asset.allocation}%`, backgroundColor:"#00c9a7"}}
                       ></div>
                     </div>
                     <div className="allocation-value">{asset.allocation}%</div>
